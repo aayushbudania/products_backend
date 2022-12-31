@@ -39,7 +39,7 @@ mongoose.connection.on('disconnected', () => {
     console.log("Database disconnected.");
 })
 
-app.listen(8800, () => {
+app.listen(process.env.PORT || 8800, () => {
     connect();
     console.log("Connected to server");
 })
